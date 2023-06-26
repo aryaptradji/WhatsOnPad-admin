@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's On Pads Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color: #82AAE3;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="font-weight: bold; margin-left: 20%; font-size: 200%;">Whats On Pads</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 25%;">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="book.html">Book</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="user.html">User</a>
+                  </li>
+                    <li class="nav-item" style="background-color:#E8A0BF; border-radius: 30px;">
+                    <a class="nav-link" href="account.html">Account</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <table class="table table-striped" style="margin-top: 6%;">
+        <thead>
+            <tr>
+                <th>Authors</th>
+                <th>Book Name</th>
+                <th>Price</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Colleen Hoover</td>
+                <td>Akhir Antara Kita</td>
+                <td>600.000</td>
+                <td><button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Ika Natassa</td>
+                <td>Architecture of Love</td>
+                <td>500.000</td>
+                <td><button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Tere Liye</td>
+                <td>Bumi</td>
+                <td>500.000</td>
+                <td><button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <td>J.K Rowling</td>
+                <td>Harry potter and Deathly Hallows</td>
+                <td>500.000</td>
+                <td><button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel" >Add Book Now</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form onsubmit="return false"> 
+              <div class="modal-body">
+              <input  placeholder="Authors: J.K. Rowli" id="authorss" class="inputnama"></input>
+              <input placeholder="Book Name: Harry potter and Deathly Hallow" id="booknames" class="inputnama"></input>
+              <input placeholder="Price: 200.000" id="prices" type="number" class="inputnama"></input>
+              <p class="text-danger" id="modalAlert2" style="display: none;">Something went wrong</p>
+              <!-- input harga -->
+              
+              </div>
+              <div class="modal-footer col-12">
+                  <input type="button" class="btn btn-primary" value="Add Book Now" id="buttonAdd">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class=" modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel2">Congratulation!!!</h5>
+              <a href="afbookadd.html"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+            </div>
+            <div class="modal-body">
+              Congrats You have to add The Book
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12" style="display: flex; justify-content: center;">
+        <div class="row">
+          <a class="btn btn-primary" data-bs-toggle="modal"  href="#exampleModalToggle" role="button">Add Book</a>
+        </div>
+      </div>
+      <script src="js/book.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+</body>
+</html>
